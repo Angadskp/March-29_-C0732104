@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace C0732104
@@ -12,6 +13,11 @@ namespace C0732104
         {
             Console.WriteLine("Hello World");
         }
+    }
+
+    static void Download()
+    {
+        Thread.Sleep(2000);
     }
     }
 	
