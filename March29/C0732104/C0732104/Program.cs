@@ -10,13 +10,9 @@ namespace C0732104
     {
         static void Main(string[] args)
         {
-			HelloWorld hw = new HelloWorld();
-			hw.Hello();
+            Console.WriteLine("Hello World");
         }
     }
+    }
 	
-	class HelloWorld{
-		public void Hello(){
-		Console.WriteLine("Hello World");}
-}
-}
+	
