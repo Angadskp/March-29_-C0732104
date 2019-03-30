@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -15,28 +16,23 @@ namespace C0732104
             Download();
             Console.ReadLine();
         }
-   
-    static async  void Download()
-    {
-            await Network.Download();
-            Console.WriteLine("Download Completed");
-    }
 
-<<<<<<< HEAD
-=======
-    static void Download()
-    {
-        Thread.Sleep(66000);
->>>>>>> eba03272867cc416a68fa52d60ac7f5a1e129661
+        static async void Download()
+        {
+            await Network.Download();
+            Console.WriteLine("Download Complete");
+        }
+
     }
 
     class Network
     {
-        static public Task Download()
+        public async void Download()
         {
-            return Task.Run(() => Thread.Sleep(3000));
-
-        }
+            HttpClient client = new HttpClient();
+            var data = await client.GetStringAsync("https://torontopubliclibrary.ca");
+            Console.WriteLine(data); 
+                }
     }
 }
 
