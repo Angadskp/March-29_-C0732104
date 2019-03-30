@@ -17,7 +17,7 @@ namespace C0732104
 
     static void Download()
     {
-        Thread.Sleep(2000);
+        Thread.Sleep(66000);
     }
     }
 	
