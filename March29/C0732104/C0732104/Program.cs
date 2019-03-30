@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Collections;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,10 +28,10 @@ namespace C0732104
 
     class Network
     {
-        public async void Download()
+        public static async Task  Download()
         {
             HttpClient client = new HttpClient();
-            var data = await client.GetStringAsync("https://torontopubliclibrary.ca");
+            var data = await client.GetStringAsync("http://ibm.com");
             Console.WriteLine(data); 
                 }
     }
