@@ -22,6 +22,12 @@ namespace C0732104
             Console.WriteLine("Download Completed");
     }
 
+<<<<<<< HEAD
+=======
+    static void Download()
+    {
+        Thread.Sleep(66000);
+>>>>>>> eba03272867cc416a68fa52d60ac7f5a1e129661
     }
 
     class Network
